@@ -18,6 +18,11 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+var mySwiper = myApp.swiper('.swiper-container', {
+    speed: 400,
+    spaceBetween: 100
+});   
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
