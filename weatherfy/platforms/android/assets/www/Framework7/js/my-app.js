@@ -20,8 +20,14 @@ myApp.onPageInit('about', function (page) {
 
 var mySwiper = myApp.swiper('.swiper-container', {
     speed: 400,
-    spaceBetween: 100
+    spaceBetween: 100,
+    pagination: '.swiper-pagination',
+    paginationHide: false,
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
 });
+
 
 // Generate dynamic page
 var dynamicPageIndex = 0;

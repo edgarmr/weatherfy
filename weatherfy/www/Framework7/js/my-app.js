@@ -23,6 +23,7 @@ var mySwiper = myApp.swiper('.swiper-container', {
     spaceBetween: 100
 });
 
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {
