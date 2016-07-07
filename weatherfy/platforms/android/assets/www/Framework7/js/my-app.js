@@ -20,12 +20,7 @@ myApp.onPageInit('about', function (page) {
 
 var mySwiper = myApp.swiper('.swiper-container', {
     speed: 400,
-    spaceBetween: 100,
-    pagination: '.swiper-pagination',
-    paginationHide: false,
-    paginationClickable: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    spaceBetween: 100
 });
 
 
@@ -57,12 +52,6 @@ function createContentPage() {
     );
 	return;
 }
-
-$$('.search').on('click', function(){
-  // var formData = app.formToJSON('#my-form');
-  // alert(JSON.stringify(formData));
-  alert("funciona");
-});
 
 $$('#About').on('click', function () {
   myApp.alert('Acerca de nosotros', 'Weatherfy!');

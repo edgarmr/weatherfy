@@ -53,12 +53,6 @@ function createContentPage() {
 	return;
 }
 
-$$('.search').on('click', function(){
-  // var formData = app.formToJSON('#my-form');
-  // alert(JSON.stringify(formData));
-  alert("funciona");
-});
-
 $$('#About').on('click', function () {
   myApp.alert('Acerca de nosotros', 'Weatherfy!');
 });
