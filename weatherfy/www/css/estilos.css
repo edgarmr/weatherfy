@@ -3,3 +3,7 @@
 .toolbar .toolbar-inner i{
     font-size: 2em;
 }
+
+.toolbar-inner .link{
+	margin: 0 auto;
+}
