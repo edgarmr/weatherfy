@@ -15,11 +15,6 @@
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         
         <title>Weatherfy</title>
-        <style type="text/css">
-            .swiper-slide{
-                margin-top: 10px;
-            }
-        </style>
         <script >
             var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
             var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
@@ -89,13 +84,11 @@
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
                                     <div id="swiper1" class="swiper-slide">
-                                        <div>
-                                            <input type="button" id="btnHola" value="click here!">
-                                            <input type="button" id="alert" value="¡Click me!" onclick="showDay()">
-                                        </div>
-                                        <div class="tarjeta">
-                                            <div class="titulo"><h1>Aqui va el titulo</h1></div>
-                                            <div class="row">
+                                    <div id="tarjetap" class="card demo-card-header-pic">
+                                          <div style="background-image:url(img/nublado.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va la ciudad</h1></div>
+                                          <div class="card-content">
+                                            <div class="card-content-inner">
+                                              <div class="row">
                                                 <div class="col-50">
                                                     <div class="icono">aqui va el icono</div>
                                                 </div>
@@ -106,22 +99,173 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            <div>
-                                                <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
-                                                <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
-                                                <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
-                                                <div class="humedad"><i class="ionicons ion-waterdrop"></i> Humedad<p></p></div>
+                                            <div class="row">
+                                                <div class="col-50">
+                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
+                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
+                                                    <div class="humedad"><i class="ionicons ion-waterdrop"></i> Humedad<p></p></div>
+                                                </div>
                                             </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                          </div>
                                         </div>
                                     </div>
                                     <div id="swiper2" class="swiper-slide">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
+                                        <div id="tarjeta1" class="card demo-card-header-pic">
+                                          <div style="background-image:url(img/nublado.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va el día 1</h1></div>
+                                          <div class="card-content">
+                                            <div class="card-content-inner">
+                                              <div class="row">
+                                                <div class="col-50">
+                                                    <div class="icono">aqui va el icono</div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div>
+                                                        <div class="desc">Descpripcion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-50">
+                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
+                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                          </div>
+                                        </div>
+                                        <div id="tarjeta2" class="card demo-card-header-pic">
+                                          <div style="background-image:url(img/soleado.jpg); background-size: 150%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va el día 2</h1></div>
+                                          <div class="card-content">
+                                            <div class="card-content-inner">
+                                              <div class="row">
+                                                <div class="col-50">
+                                                    <div class="icono">aqui va el icono</div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div>
+                                                        <div class="desc">Descpripcion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-50">
+                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
+                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                          </div>
+                                        </div>
+                                        <div id="tarjeta3" class="card demo-card-header-pic">
+                                          <div style="background-image:url(img/lluvia.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va el día 3</h1></div>
+                                          <div class="card-content">
+                                            <div class="card-content-inner">
+                                              <div class="row">
+                                                <div class="col-50">
+                                                    <div class="icono">aqui va el icono</div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div>
+                                                        <div class="desc">Descpripcion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-50">
+                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
+                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                          </div>
+                                        </div>
+                                        <div id="tarjeta4" class="card demo-card-header-pic">
+                                          <div style="background-image:url(img/noche.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va el día 4</h1></div>
+                                          <div class="card-content">
+                                            <div class="card-content-inner">
+                                              <div class="row">
+                                                <div class="col-50">
+                                                    <div class="icono">aqui va el icono</div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div>
+                                                        <div class="desc">Descpripcion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-50">
+                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
+                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                          </div>
+                                        </div>
+                                        <div id="tarjeta5" class="card demo-card-header-pic">
+                                          <div style="background-image:url(img/tormenta.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va el día 5</h1></div>
+                                          <div class="card-content">
+                                            <div class="card-content-inner">
+                                              <div class="row">
+                                                <div class="col-50">
+                                                    <div class="icono">aqui va el icono</div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div>
+                                                        <div class="desc">Descpripcion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-50">
+                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
+                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                </div>
+                                                <div class="col-50">
+                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                          </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
+                                        
                                     </div>
-                                    ... other slides ...
                                     <!-- Pagination, if required -->
                                     <div class="swiper-pagination"></div>
                                 </div>
