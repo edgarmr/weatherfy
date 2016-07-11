@@ -54,5 +54,5 @@ function createContentPage() {
 }
 
 $$('#About').on('click', function () {
-  myApp.alert('Acerca de nosotros', 'Weatherfy!');
+  myApp.alert('Acerca de nosotros', localStorage.getItem("Nombre"));
 });
