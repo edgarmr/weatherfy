@@ -50,6 +50,7 @@ $(document).ready(function(){
                         $("#swiper2 #tarjeta"+i+" .tmin p").html(ftmin);
                         $("#swiper2 #tarjeta"+i+" .viento p").html(wind);
                         $("#swiper2 #tarjeta"+i+" .fecha p").html(date);
+                        //llena una tarjetita por vuelta
                     }
                 });
         }
