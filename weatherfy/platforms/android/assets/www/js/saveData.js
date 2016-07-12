@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#saveLoc").on('click',function(){
-        localStorage.setItem("Nombre","Edgar");
+       $("#lista").append("<li> "+$("#localidad").val()+" </li>");
         
     });
 });

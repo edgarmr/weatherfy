@@ -1,3 +1,6 @@
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f = new Date();
 $(document).ready(function(){
      $("#search").on('click',function(){
         var location=$("#localidad").val();
@@ -21,6 +24,7 @@ $(document).ready(function(){
                     $("#swiper1 #tarjetap .tmin p").html(tempMin);
                     $("#swiper1 #tarjetap .viento p").html(wind);
                     $("#swiper1 #tarjetap .humedad p").html(humidity);
+                    $("#swiper1 #tarjetap .fecha p").html(diasSemana[f.getDay()]+', '+f.getDate()+' de '+meses[f.getMonth()]+' del '+f.getFullYear());
             }).fail(function(){
                 alert("No hay conexión a internet");
             });   
@@ -41,9 +45,9 @@ $(document).ready(function(){
                         var desc = forecast.list[1+inc].weather[0].description;
                         var icon1 = "<img src='http://openweathermap.org/img/w/"+forecast.list[1+inc].weather[0].icon+".png'>";
                         var wind = forecast.list[1+inc].wind.speed;
-                        var date = forecast.list[1+inc].dt_txt;
+                        var date = (f.getDate()+i)+' de '+meses[f.getMonth()]+' del '+f.getFullYear();
                         inc+=8;
-                        cad+=ftmin+' '+ftmax+' '+desc+' '+icon1+' '+wind+' '+date+'<br>';
+                        $("#dia"+i).html(diasSemana[f.getDay()+i]);
                         $("#swiper2 #tarjeta"+i+" .icono").html(icon1);
                         $("#swiper2 #tarjeta"+i+" .desc").html(desc);
                         $("#swiper2 #tarjeta"+i+" .tmax p").html(ftmax);
