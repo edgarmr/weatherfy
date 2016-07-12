@@ -29,16 +29,10 @@ $(document).ready(function(){
                 alert("No hay conexión a internet");
             });   
             
+            //Obtenemos el clima de los siguientes 5 dias.
             $.get('http://api.openweathermap.org/data/2.5/forecast?q='+location+'&APPID=914732d37fb626966c5bf9cf647e3342',
                   function(forecast){
-                    /**var ftmin = forecast.list[1+8].main.temp_min;
-                    var ftmax = forecast.list[1+8].main.temp_max;
-                    var desc = forecast.list[1+8].weather[0].description;
-                    var icon1 = forecast.list[1+8].weather[0].icon+'.png';
-                    var wind = forecast.list[1+8].wind.speed;
-                    var date = forecast.list[1+8].dt_txt;*/
                     var inc=0;
-                    var cad='';
                     for(var i=1; i<=5; i++){
                         var ftmin = forecast.list[1+inc].main.temp_min;
                         var ftmax = forecast.list[1+inc].main.temp_max;
@@ -60,8 +54,6 @@ $(document).ready(function(){
         else{
             alert('Inserte una localidad');
         }
-        
-        
      });
 });
                   

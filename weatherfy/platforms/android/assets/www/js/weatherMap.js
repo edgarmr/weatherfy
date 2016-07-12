@@ -45,9 +45,9 @@ $(document).ready(function(){
                         var desc = forecast.list[1+inc].weather[0].description;
                         var icon1 = "<img src='http://openweathermap.org/img/w/"+forecast.list[1+inc].weather[0].icon+".png'>";
                         var wind = forecast.list[1+inc].wind.speed;
-                        var date = forecast.list[1+inc].dt_txt;
+                        var date = (f.getDate()+i)+' de '+meses[f.getMonth()]+' del '+f.getFullYear();
                         inc+=8;
-                        cad+=ftmin+' '+ftmax+' '+desc+' '+icon1+' '+wind+' '+date+'<br>';
+                        $("#dia"+i).html(diasSemana[f.getDay()+i]);
                         $("#swiper2 #tarjeta"+i+" .icono").html(icon1);
                         $("#swiper2 #tarjeta"+i+" .desc").html(desc);
                         $("#swiper2 #tarjeta"+i+" .tmax p").html(ftmax);
