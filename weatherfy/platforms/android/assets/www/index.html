@@ -13,7 +13,6 @@
         <script type="text/javascript" src="js/saveData.js"> </script>
         <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
-        
         <title>Weatherfy</title>
     </head>
     <body class="theme-green">
@@ -43,14 +42,13 @@
                     </ul>
                 </div>
                 <div class="content-block">
-                    <a id="saveLoc" class="button button-round button-fill">Save location</a>
+                    <a id="saveLocation" class="button button-round button-fill">Save location</a>
                 </div>
                 <div class="about content-block">
                     <p><a href="#" id="About">Alert With Text</a></p>
                 </div>
             </div>
         </div>
-
         <div class="views">
             <div class="view view-main">
                 <div class="pages navbar-through toolbar-fixed">
@@ -77,34 +75,55 @@
                                     <!-- Slides -->
                                     <div id="swiper1" class="swiper-slide">
                                     <div id="tarjetap" class="card demo-card-header-pic">
-                                          <div style="background-image:url(img/nublado.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1>Aqui va la ciudad</h1></div>
+                                          <div style="background-image:url(img/nublado.jpg); background-size: 100%" valign="bottom" class="card-header color-white no-border"><h1 id="titulop">Aqui va la ciudad</h1></div>
                                           <div class="card-content">
                                             <div class="card-content-inner">
                                               <div class="row">
                                                 <div class="col-50">
-                                                    <div class="icono">aqui va el icono</div>
+                                                    <div id="iconop">aqui va el icono</div>
                                                 </div>
                                                 <div class="col-50">
                                                     <div>
-                                                        <div class="temp">Temperatura</div>
-                                                        <div class="desc">Descpripcion</div>
+                                                        <div id="tempep">Temperatura</div>
+                                                        <div id="descp">Descpripcion</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-50">
-                                                    <div class="tmax"><i class="ionicons ion-thermometer"></i> Temperatura maxima<p></p></div>
-                                                    <div class="viento"><i class="ionicons ion-flag"></i> Viento<p></p></div>
+                                                    <div class="tmax">
+                                                        <i class="ionicons ion-thermometer">
+                                                            
+                                                        </i> Temperatura maxima
+                                                        <p id="tempMaxp"></p>
+                                                    </div>
+                                                    <div class="viento">
+                                                        <i class="ionicons ion-flag"></i> 
+                                                            Viento
+                                                        <p id="vientop"></p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-50">
-                                                    <div class="tmin"><i class="ionicons ion-thermometer"></i> Tempreatura minima<p></p></div>
-                                                    <div class="humedad"><i class="ionicons ion-waterdrop"></i> Humedad<p></p></div>
+                                                    <div class="tmin">
+                                                        <i class="ionicons ion-thermometer"></i> 
+                                                            Tempreatura minima
+                                                            <p id="tempMinp"></p>
+                                                    </div>
+                                                    <div class="humedad">
+                                                        <i class="ionicons ion-waterdrop"></i> 
+                                                        Humedad
+                                                        <p id="humedadp"></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             </div>
                                           </div>
                                           <div class="card-footer">
-                                            <div class="fecha"><i class="ionicons ion-android-calendar"></i> Fecha<p></p></div>
+                                            <div class="fecha">
+                                                <i class="ionicons ion-android-calendar"></i> 
+                                                Fecha
+                                                <p id="fechap"></p>
+                                            </div>
                                           </div>
                                         </div>
                                     </div>
