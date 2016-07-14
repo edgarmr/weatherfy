@@ -32,3 +32,9 @@
 .card .humedad i{
 	color: #2980b9;
 }
+
+.swiper-container{
+	background-color: #d7d7d7;
+	margin-bottom: 45px;
+	margin-top: 5px;
+}

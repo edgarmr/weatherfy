@@ -13,7 +13,7 @@ $(document).ready(function(){
      }
      //Acciona el mismo evento para el boton de busqueda y guardado.
      $("#search, #saveLocation").on('click',function(e){
-        var location=$("#localidad").val().toUpperCase();
+        var location=$("#localidad").val();
         if(location!=""){
             //Obtenemos los datos relevantes del clima del día actual.
             $.get('http://api.openweathermap.org/data/2.5/weather?q='+location+'&APPID=914732d37fb626966c5bf9cf647e3342').done(
@@ -67,24 +67,13 @@ $(document).ready(function(){
                         localStorage.setItem(key,locationString);
                         
                     }
-            }).fail(function(jqXHR, textStatus, errorThrown){
-                if(jqXHR.status === 0){
-                    alert('Verifique su conexión a internet.');
-                }
-                if(jqXHR.status == 404){
-                    alert('La localidad que introdujo, no se encontró.');
-                }
-
-                if(textStatus === 'timeout'){
-                    alert('El tiempo de espera se ha agotado.');
-                }
-
+            }).fail(function(){
+                alert("No hay conexión a internet");
             });
             //Obtenemos el clima de los siguientes 5 dias.
             $.get('http://api.openweathermap.org/data/2.5/forecast?q='+location+'&APPID=914732d37fb626966c5bf9cf647e3342',
                   function(forecast){
                     var inc=0;
-                    var dia = parseInt(f.getDay()+1);
                     for(var i=1; i<=5; i++){
                         var ftmin = (parseInt(forecast.list[1+inc].main.temp_min)-273);
                         var ftmax = (parseInt(forecast.list[1+inc].main.temp_max)-273);
@@ -92,18 +81,14 @@ $(document).ready(function(){
                         var icon1 = "<img src='http://openweathermap.org/img/w/"+forecast.list[1+inc].weather[0].icon+".png'>";
                         var wind = forecast.list[1+inc].wind.speed;
                         var date = (f.getDate()+i)+' de '+meses[f.getMonth()]+' del '+f.getFullYear();
-                        if(dia>6){
-                            dia=0;
-                        }
                         inc+=8;
-                        $("#dia"+i).html(dias[dia]);
-                        $("#tab2 #tarjeta"+i+" .icono").html(icon1);
-                        $("#tab2 #tarjeta"+i+" .desc").html(desc);
-                        $("#tab2 #tarjeta"+i+" .tmax p").html(ftmax);
-                        $("#tab2 #tarjeta"+i+" .tmin p").html(ftmin);
-                        $("#tab2 #tarjeta"+i+" .viento p").html(wind);
-                        $("#tab2 #tarjeta"+i+" .fecha p").html(date);
-                        dia++;
+                        $("#dia"+i).html(dias[f.getDay()+i]);
+                        $("#swiper2 #tarjeta"+i+" .icono").html(icon1);
+                        $("#swiper2 #tarjeta"+i+" .desc").html(desc);
+                        $("#swiper2 #tarjeta"+i+" .tmax p").html(ftmax);
+                        $("#swiper2 #tarjeta"+i+" .tmin p").html(ftmin);
+                        $("#swiper2 #tarjeta"+i+" .viento p").html(wind);
+                        $("#swiper2 #tarjeta"+i+" .fecha p").html(date);
                     }
                 });
         }

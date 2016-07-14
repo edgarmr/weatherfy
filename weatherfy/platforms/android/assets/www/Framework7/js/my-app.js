@@ -52,7 +52,3 @@ function createContentPage() {
     );
 	return;
 }
-
-$$('#About').on('click', function () {
-  myApp.alert('Acerca de nosotros', localStorage.getItem("Nombre"));
-});
